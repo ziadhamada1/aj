@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خطوات إنتاج خريطة المؤشرات المبنية - تفاعلية</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    .steps-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      gap: 10px;
+    }
+    .step-btn {
+      padding: 10px 20px;
+      background-color: #ddd;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .step-btn.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .step-content {
+      display: none;
+      text-align: right;
+      animation: fadeIn 0.5s;
+    }
+    .step-content.active {
+      display: block;
+    }
+    .step-content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .step-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+<section class="container">
+  <h2>خطوات إنتاج خريطة المؤشرات المبنية</h2>
+
+  <!-- شريط التنقل بين الخطوات -->
+  <div class="steps-nav">
+    <button class="step-btn active" data-step="1">الخطوة 1</button>
+    <button class="step-btn" data-step="2">الخطوة 2</button>
+    <button class="step-btn" data-step="3">الخطوة 3</button>
+    <button class="step-btn" data-step="4">الخطوة 4</button>
+    <button class="step-btn" data-step="5">الخطوة 5</button>
+    <button class="step-btn" data-step="6">الخطوة 6</button>
+    <button class="step-btn" data-step="7">الخطوة 7</button>
+    <button class="step-btn" data-step="8">الخطوة 8</button>
+    <button class="step-btn" data-step="9">الخطوة 9</button>
+    <button class="step-btn" data-step="10">الخطوة 10</button>
+    <button class="step-btn" data-step="11">الخطوة 11</button>
+
+
+    
+    <button class="step-btn" data-step="12">Open Product </button>
+    <button class="step-btn" data-step="13"> save</button>
+    <button class="step-btn" data-step="14">الخطوة 5</button>
+    <button class="step-btn" data-step="15">الخطوة 6</button>
+    <button class="step-btn" data-step="16">الخطوة 7</button>
+    <button class="step-btn" data-step="17">الخطوة 8</button>
+    <button class="step-btn" data-step="18">الخطوة 9</button>
+    <button class="step-btn" data-step="19">الخطوة 10</button>
+    <button class="step-btn" data-step="20">الخطوة 11</button>
+
+    <button class="step-btn" data-step="21">Open Product </button>
+    <button class="step-btn" data-step="22"> save</button>
+    <button class="step-btn" data-step="23">الخطوة 5</button>
+    <button class="step-btn" data-step="24">الخطوة 6</button>
+    <button class="step-btn" data-step="25">الخطوة 7</button>
+    <button class="step-btn" data-step="26">الخطوة 8</button>
+    <button class="step-btn" data-step="27">الخطوة 9</button>
+    <button class="step-btn" data-step="28">الخطوة 10</button>
+    <button class="step-btn" data-step="29">الخطوة 11</button>
+    <button class="step-btn" data-step="30">الخطوة 11</button>
+
+  </div>
+
+  <!-- محتوى الخطوات -->
+  <div class="step-content active" data-step="1">
+    <div class="step-title">الخطوة 1: جمع بيانات الأقمار الصناعية</div>
+    <p>اول خطوه بنفتح موقع Copernicus</p>
+    <img src="img/AS.png" alt="جمع بيانات الأقمار الصناعية">
+  </div>
+
+  <div class="step-content" data-step="2">
+    <div class="step-title">الخطوة 2: </div>
+    <p>    بنختار sentinel 2 عشان بتصحح مرئيه  </p>
+    <img src="img/2.jpg" alt="معالجة الصور الطيفية">
+  </div>
+
+  <div class="step-content" data-step="3">
+    <div class="step-title">الخطوة 3:   </div>
+    <p>بعدها تحدد منقطه الشرح و تنزلها </p>
+    <!-- <img src="img/step3.jpg" alt="حساب المؤشرات المبنية"> -->
+  </div>
+
+  <div class="step-content" data-step="4">
+    <div class="step-title">الخطوة 4:   </div>
+    <p>بعدها تفتح برنامح snap for gps  عشان مرئيه نزلت بتشتغل ع برنامج.</p>
+    <img src="img/3.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+  
+  <div class="step-content" data-step="5">
+    <div class="step-title">الخطوة 5:</div>
+    <p>خطوه بعدها ندمج مرئتين عن طريق raster ل geometric ل mosaicking</p>
+    <img src="img/4.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+  <div class="step-content" data-step="6">
+    <div class="step-title">الخطوة 6:</div>
+    <p>نحط ملفين و ندوس run</p>
+    <img src="img/5.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+  <div class="step-content" data-step="7">
+    <div class="step-title">الخطوة 7:</div>
+    <p>ن raster لgeomatric ل resampling
+
+Source نختار الاسم ملف
+Target نختار مرئيه  هنشتغل عليها</p>
+    <img src="img/6.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+  <div class="step-content" data-step="8">
+    <div class="step-title">الخطوة 8:</div>
+    <p>خطوه تانيه نحدد منطقه الدراسه من نافذه woeld view</p>
+    <img src="img/7.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+    <div class="step-content" data-step="9">
+    <div class="step-title">الخطوة 9:</div>
+    <p>بعدها من raster نختار subset</p>
+    <img src="img/8.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+    <div class="step-content" data-step="10">
+    <div class="step-title">الخطوة 10:</div>
+    <p>نختار ملف subset كليك يمين  ونختارband maths</p>
+    <img src="img/9.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+    <div class="step-content" data-step="11">
+    <div class="step-title">الخطوة 11:</div>
+    <p>هندوس ع band maths و بعدها edit expression</p>
+    <img src="img/10.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+    <div class="step-content" data-step="12">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/1.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+  
+    <div class="step-content" data-step="13">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/save.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+  
+    <div class="step-content" data-step="14">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/3.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+  
+    <div class="step-content" data-step="15">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/4.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+    <div class="step-content" data-step="16">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/5.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+  
+    <div class="step-content" data-step="17">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/6.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+  
+    <div class="step-content" data-step="18">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/7.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+    <div class="step-content" data-step="19">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/8.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+    <div class="step-content" data-step="20">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/9.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+
+  
+    <div class="step-content" data-step="21">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/10.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+
+    <div class="step-content" data-step="22">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/11.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+  <div class="step-content" data-step="23">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/12.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+  <div class="step-content" data-step="24">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/13.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+  <div class="step-content" data-step="25">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/14.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+    <div class="step-content" data-step="26">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/15.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+    <div class="step-content" data-step="27">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/16.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+  <div class="step-content" data-step="28">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/17.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+
+    <div class="step-content" data-step="29">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/18.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+    <div class="step-content" data-step="30">
+    <div class="step-title"> Open Product:</div>
+    <p>يُستخدم لفتح ملف بيانات/منتج (image/product)</p>
+    <img src="img/New folder/19.jpg" alt="إنشاء الخريطة النهائية">
+  </div>
+
+
+
+  <div style="text-align:center;">
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للصفحة الرئيسية</a>
+  </div>
+
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.step-btn');
+  const contents = document.querySelectorAll('.step-content');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const step = btn.getAttribute('data-step');
+
+      // إزالة الكلاسات النشطة
+      buttons.forEach(b => b.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      // إضافة الكلاسات للخطوة المختارة
+      btn.classList.add('active');
+      document.querySelector(`.step-content[data-step="${step}"]`).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
